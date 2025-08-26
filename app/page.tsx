@@ -11,11 +11,18 @@ export default function HomePage() {
             Simplifying credit, <span className="text-brand-teal">amplifying rewards</span>
           </h1>
           <p className="mt-5 text-brand-navy/80 text-lg">
-            Rebranded from PiePay to <strong>PeerPays</strong>, keeping the same clean experience and
-            streamlined flows you love — now in our navy & teal palette.
+            With <strong>PeerPays</strong>, online shoppers get access to the right credit cards to redeem the best deals —
+            and cardholders can put their cards to work, earning cash and maximizing rewards.
           </p>
           <div className="mt-8 flex gap-3">
-            <a href="#get-started" className="btn btn-primary">Get started</a>
+            <a
+              href="https://lnkd.in/dYfw7unc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
+              Get started
+            </a>
             <Link href="/how-it-works" className="btn btn-ghost">How it works</Link>
           </div>
           <p className="mt-3 text-xs text-brand-navy/60">No card details are shared. Simple, safe, and compliant within limits.</p>
@@ -44,7 +51,14 @@ export default function HomePage() {
             <h3 className="text-2xl font-semibold">Ready to start with PeerPays?</h3>
             <p className="text-brand-navy/75 mt-1">Create your profile and post requirements in minutes.</p>
           </div>
-          <a href="#" className="btn btn-primary">Join PeerPays</a>
+          <a
+            href="https://lnkd.in/dYfw7unc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+          >
+            Join PeerPays
+          </a>
         </div>
       </section>
     </>
