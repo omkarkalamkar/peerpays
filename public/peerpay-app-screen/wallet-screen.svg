@@ -1,0 +1,58 @@
+<svg width="280" height="560" viewBox="0 0 280 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Phone Frame -->
+  <rect width="280" height="560" rx="40" fill="#000000"/>
+  <rect x="8" y="8" width="264" height="544" rx="32" fill="#FFFFFF"/>
+  
+  <!-- Status Bar -->
+  <rect x="8" y="8" width="264" height="44" rx="32" fill="#000000"/>
+  <text x="24" y="32" fill="white" font-family="system-ui" font-size="12" font-weight="500">9:41</text>
+  <text x="240" y="32" fill="white" font-family="system-ui" font-size="12">100%</text>
+  <rect x="248" y="24" width="16" height="8" rx="2" stroke="white" stroke-width="1" fill="none"/>
+  <rect x="249" y="25" width="14" height="6" rx="1" fill="#22C55E"/>
+  
+  <!-- Header -->
+  <text x="24" y="84" fill="#0B2C4B" font-family="system-ui" font-size="24" font-weight="bold">My Wallet</text>
+  <text x="220" y="84" fill="#37B0A2" font-family="system-ui" font-size="14" font-weight="600">+ Add</text>
+  
+  <!-- HDFC Card -->
+  <rect x="24" y="108" width="232" height="140" rx="16" fill="url(#hdfc-gradient)"/>
+  <rect x="40" y="128" width="40" height="20" rx="4" fill="white" fill-opacity="0.2"/>
+  <text x="52" y="141" fill="white" font-family="system-ui" font-size="10" font-weight="bold">HDFC</text>
+  <text x="88" y="141" fill="white" font-family="system-ui" font-size="14" font-weight="bold">Regalia Gold</text>
+  <text x="88" y="156" fill="white" font-family="system-ui" font-size="12" fill-opacity="0.8">**** **** **** 4567</text>
+  <circle cx="216" cy="142" r="12" fill="#22C55E"/>
+  <text x="212" y="147" fill="white" font-family="system-ui" font-size="10">✓</text>
+  <rect x="40" y="180" width="200" height="48" rx="12" fill="white" fill-opacity="0.1"/>
+  <text x="52" y="196" fill="white" font-family="system-ui" font-size="10" fill-opacity="0.8">Available Credit</text>
+  <text x="52" y="216" fill="white" font-family="system-ui" font-size="20" font-weight="bold">₹1,25,000</text>
+  
+  <!-- ICICI Card -->
+  <rect x="24" y="268" width="232" height="140" rx="16" fill="url(#icici-gradient)"/>
+  <rect x="40" y="288" width="40" height="20" rx="4" fill="white" fill-opacity="0.2"/>
+  <text x="50" y="301" fill="white" font-family="system-ui" font-size="10" font-weight="bold">ICICI</text>
+  <text x="88" y="301" fill="white" font-family="system-ui" font-size="14" font-weight="bold">Amazon Pay</text>
+  <text x="88" y="316" fill="white" font-family="system-ui" font-size="12" fill-opacity="0.8">**** **** **** 8901</text>
+  <circle cx="216" cy="302" r="12" fill="#22C55E"/>
+  <text x="212" y="307" fill="white" font-family="system-ui" font-size="10">✓</text>
+  <rect x="40" y="340" width="200" height="48" rx="12" fill="white" fill-opacity="0.1"/>
+  <text x="52" y="356" fill="white" font-family="system-ui" font-size="10" fill-opacity="0.8">Available Credit</text>
+  <text x="52" y="376" fill="white" font-family="system-ui" font-size="20" font-weight="bold">₹75,000</text>
+  
+  <!-- Add Card Button -->
+  <rect x="24" y="428" width="232" height="60" rx="16" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="8,4"/>
+  <circle cx="140" cy="458" r="16" fill="#37B0A2" fill-opacity="0.2"/>
+  <text x="135" y="463" fill="#37B0A2" font-family="system-ui" font-size="20">+</text>
+  <text x="112" y="478" fill="#6B7280" font-family="system-ui" font-size="14">Add New Card</text>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="hdfc-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E40AF"/>
+      <stop offset="100%" style="stop-color:#1E3A8A"/>
+    </linearGradient>
+    <linearGradient id="icici-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F97316"/>
+      <stop offset="100%" style="stop-color:#DC2626"/>
+    </linearGradient>
+  </defs>
+</svg>

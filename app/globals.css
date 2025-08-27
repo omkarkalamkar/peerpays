@@ -9,29 +9,136 @@
 
 html, body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   @apply text-brand-navy bg-white antialiased;
 }
+
 .container {
   @apply max-w-6xl mx-auto px-4;
 }
+
 .card {
-  @apply bg-white shadow-soft rounded-2xl p-6;
+  @apply bg-white shadow-soft rounded-2xl p-6 border border-brand-navy/5 hover:shadow-lg hover:border-brand-teal/20 transition-all duration-300;
 }
+
 .btn {
-  @apply inline-flex items-center justify-center px-5 py-3 rounded-2xl font-medium shadow-soft;
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-2xl font-medium shadow-soft transition-all duration-200 hover:scale-105;
 }
+
 .btn-primary {
-  @apply bg-brand-navy text-white hover:opacity-90;
+  @apply bg-brand-navy text-white hover:bg-brand-teal hover:shadow-xl;
 }
+
 .btn-ghost {
-  @apply border border-brand-navy/10 hover:bg-brand-sky;
+  @apply border border-brand-navy/20 hover:bg-brand-sky hover:border-brand-teal;
 }
+
 .nav-link {
-  @apply text-brand-navy/80 hover:text-brand-navy transition;
+  @apply text-brand-navy/80 hover:text-brand-teal transition-colors duration-200 font-medium;
 }
+
 .badge {
-  @apply bg-brand-sky text-brand-navy px-3 py-1 rounded-full text-sm;
+  @apply bg-brand-sky text-brand-navy px-4 py-2 rounded-full text-sm font-medium border border-brand-teal/20;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #0B2C4B 0%, #37B0A2 100%);
+}
+
+.feature-card {
+  @apply card hover:transform hover:-translate-y-1;
+}
+
+.step-card {
+  @apply card relative overflow-hidden;
+}
+
+.step-card::before {
+  content: '';
+  @apply absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-brand-teal to-brand-navy;
+}
+
+.phone-mockup {
+  @apply w-48 h-96 bg-gray-900 rounded-3xl p-2 shadow-2xl;
+}
+
+.phone-screen {
+  @apply w-full h-full bg-white rounded-2xl overflow-hidden relative;
+}
+
+.phone-header {
+  @apply h-8 bg-gray-50 relative;
+}
+
+.phone-notch {
+  @apply absolute top-1 left-1/2 transform -translate-x-1/2 w-20 h-6 bg-gray-900 rounded-full;
+}
+
+.phone-content {
+  @apply flex flex-col items-center justify-center h-full p-6 bg-gradient-to-b from-brand-sky/20 to-white;
+}
+
+.app-screen {
+  @apply flex-1 bg-white overflow-hidden;
+}
+
+/* Animation Classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 1s ease-out forwards;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px) rotate(-8deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(-8deg);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px) rotate(8deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(8deg);
+  }
 }

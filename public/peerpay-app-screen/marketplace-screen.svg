@@ -1,0 +1,48 @@
+<svg width="280" height="560" viewBox="0 0 280 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Phone Frame -->
+  <rect width="280" height="560" rx="40" fill="#000000"/>
+  <rect x="8" y="8" width="264" height="544" rx="32" fill="#FFFFFF"/>
+  
+  <!-- Status Bar -->
+  <rect x="8" y="8" width="264" height="44" rx="32" fill="#000000"/>
+  <text x="24" y="32" fill="white" font-family="system-ui" font-size="12" font-weight="500">9:41</text>
+  <text x="240" y="32" fill="white" font-family="system-ui" font-size="12">100%</text>
+  <rect x="248" y="24" width="16" height="8" rx="2" stroke="white" stroke-width="1" fill="none"/>
+  <rect x="249" y="25" width="14" height="6" rx="1" fill="#22C55E"/>
+  
+  <!-- Header -->
+  <text x="24" y="84" fill="#0B2C4B" font-family="system-ui" font-size="24" font-weight="bold">Marketplace</text>
+  <circle cx="240" cy="76" r="16" fill="#37B0A2" fill-opacity="0.2"/>
+  <text x="235" y="81" font-size="16">🔍</text>
+  
+  <!-- Request Cards -->
+  <rect x="24" y="108" width="232" height="120" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="40" y="136" fill="#0B2C4B" font-family="system-ui" font-size="24" font-weight="bold">₹15,000</text>
+  <text x="40" y="156" fill="#6B7280" font-family="system-ui" font-size="14">📱 Electronics Purchase</text>
+  <rect x="180" y="128" width="60" height="32" rx="8" fill="#DCFCE7" stroke="#22C55E" stroke-width="1"/>
+  <text x="195" y="142" fill="#15803D" font-family="system-ui" font-size="12" font-weight="bold">2.8%</text>
+  <text x="188" y="154" fill="#16A34A" font-family="system-ui" font-size="10">Commission</text>
+  <text x="40" y="208" fill="#9CA3AF" font-family="system-ui" font-size="12">Flipkart • Posted 2h ago</text>
+  <rect x="180" y="192" width="60" height="24" rx="12" fill="#0B2C4B"/>
+  <text x="200" y="206" fill="white" font-family="system-ui" font-size="12" font-weight="600">Accept</text>
+  
+  <rect x="24" y="244" width="232" height="120" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="40" y="272" fill="#0B2C4B" font-family="system-ui" font-size="24" font-weight="bold">₹8,500</text>
+  <text x="40" y="292" fill="#6B7280" font-family="system-ui" font-size="14">✈️ Travel Booking</text>
+  <rect x="180" y="264" width="60" height="32" rx="8" fill="#DCFCE7" stroke="#22C55E" stroke-width="1"/>
+  <text x="195" y="278" fill="#15803D" font-family="system-ui" font-size="12" font-weight="bold">3.2%</text>
+  <text x="188" y="290" fill="#16A34A" font-family="system-ui" font-size="10">Commission</text>
+  <text x="40" y="344" fill="#9CA3AF" font-family="system-ui" font-size="12">MakeMyTrip • Posted 5h ago</text>
+  <rect x="180" y="328" width="60" height="24" rx="12" fill="#0B2C4B"/>
+  <text x="200" y="342" fill="white" font-family="system-ui" font-size="12" font-weight="600">Accept</text>
+  
+  <rect x="24" y="380" width="232" height="120" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="40" y="408" fill="#0B2C4B" font-family="system-ui" font-size="24" font-weight="bold">₹22,000</text>
+  <text x="40" y="428" fill="#6B7280" font-family="system-ui" font-size="14">🛒 Fashion Shopping</text>
+  <rect x="180" y="400" width="60" height="32" rx="8" fill="#DCFCE7" stroke="#22C55E" stroke-width="1"/>
+  <text x="195" y="414" fill="#15803D" font-family="system-ui" font-size="12" font-weight="bold">2.5%</text>
+  <text x="188" y="426" fill="#16A34A" font-family="system-ui" font-size="10">Commission</text>
+  <text x="40" y="480" fill="#9CA3AF" font-family="system-ui" font-size="12">Myntra • Posted 1h ago</text>
+  <rect x="180" y="464" width="60" height="24" rx="12" fill="#0B2C4B"/>
+  <text x="200" y="478" fill="white" font-family="system-ui" font-size="12" font-weight="600">Accept</text>
+</svg>

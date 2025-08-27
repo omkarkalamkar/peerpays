@@ -10,10 +10,10 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body>
         <Nav />
-        <main className="min-h-[70vh]">{children}</main>
+        <main className="min-h-[70vh] pt-16">{children}</main>
         <Footer />
       </body>
     </html>
