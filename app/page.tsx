@@ -52,7 +52,7 @@ export default function HomePage() {
             <p className="text-brand-navy/75 mt-1">Create your profile and post requirements in minutes.</p>
           </div>
           <a
-            href="https://lnkd.in/dYfw7unc"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScSUn2RHGz_b8qAxaGYI4PH4DdRbOlTdnQ9WYzkr56TsX6XHA/viewform"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"
