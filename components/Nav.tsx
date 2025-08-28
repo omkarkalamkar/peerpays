@@ -9,8 +9,8 @@ export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full border-b border-brand-navy/10 bg-white/95 backdrop-blur-sm sticky top-0 z-50">
-      <div className="container flex items-center justify-between h-16">
+    <header className="w-full border-b border-brand-navy/10 bg-white/95 backdrop-blur-sm fixed top-0 z-50">
+      <div className="container flex items-center justify-between h-16 px-6 md:px-4">
         <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
           <Image src="/logo-icon.png" alt="PeerPays logo" width={32} height={32} priority />
           <span className="font-semibold text-lg text-brand-navy">PeerPays</span>

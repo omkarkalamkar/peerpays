@@ -537,6 +537,9 @@ video {
     max-width: 1536px;
   }
 }
+.fixed {
+  position: fixed;
+}
 .absolute {
   position: absolute;
 }
@@ -573,6 +576,9 @@ video {
 .top-6 {
   top: 1.5rem;
 }
+.top-2 {
+  top: 0.5rem;
+}
 .z-10 {
   z-index: 10;
 }
@@ -597,6 +603,10 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 .-mt-4 {
   margin-top: -1rem;
@@ -720,6 +730,9 @@ video {
 }
 .w-80 {
   width: 20rem;
+}
+.w-\[calc\(100\%-16px\)\] {
+  width: calc(100% - 16px);
 }
 .max-w-2xl {
   max-width: 42rem;
@@ -846,6 +859,9 @@ video {
 .rounded-xl {
   border-radius: 0.75rem;
 }
+.rounded-lg {
+  border-radius: 0.5rem;
+}
 .border-b {
   border-bottom-width: 1px;
 }
@@ -879,6 +895,12 @@ video {
 .bg-yellow-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+}
+.bg-gray-50\/95 {
+  background-color: rgb(249 250 251 / 0.95);
+}
+.bg-brand-teal\/20 {
+  background-color: rgb(55 176 162 / 0.2);
 }
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
@@ -984,6 +1006,10 @@ video {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 .pb-16 {
   padding-bottom: 4rem;
 }
@@ -1001,6 +1027,15 @@ video {
 }
 .pt-2 {
   padding-top: 0.5rem;
+}
+.pt-20 {
+  padding-top: 5rem;
+}
+.pt-24 {
+  padding-top: 6rem;
+}
+.pt-32 {
+  padding-top: 8rem;
 }
 .text-left {
   text-align: left;
@@ -1573,6 +1608,19 @@ body {
     top: 2rem;
   }
 
+  .md\:top-0 {
+    top: 0px;
+  }
+
+  .md\:left-0 {
+    left: 0px;
+  }
+
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
   }
@@ -1617,6 +1665,10 @@ body {
     width: 60%;
   }
 
+  .md\:w-full {
+    width: 100%;
+  }
+
   .md\:snap-none {
     scroll-snap-type: none;
   }
@@ -1651,9 +1703,30 @@ body {
     scroll-behavior: smooth;
   }
 
+  .md\:rounded-none {
+    border-radius: 0px;
+  }
+
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .md\:pt-16 {
+    padding-top: 4rem;
+  }
+
+  .md\:pt-20 {
+    padding-top: 5rem;
+  }
+
+  .md\:pt-28 {
+    padding-top: 7rem;
   }
 
   .md\:text-left {

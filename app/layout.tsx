@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" className="scroll-smooth">
       <body>
         <Nav />
-        <main className="min-h-[70vh] pt-16">{children}</main>
+        <main className="min-h-[70vh] pt-32 md:pt-28">{children}</main>
         <Footer />
       </body>
     </html>
