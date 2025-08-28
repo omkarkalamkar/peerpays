@@ -18,25 +18,39 @@ export default function HomePage() {
               <div className="absolute top-0 left-2 md:left-4 z-30 opacity-0 animate-slide-in-left">
                 <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-r from-brand-navy/20 to-brand-teal/20 rounded-3xl blur-xl"></div>
-                  <Image
-                    src="/peerpay-app-screen/abc1.png"
-                    alt="PeerPays App Dashboard"
-                    width={240}
-                    height={480}
-                    className="relative w-[160px] md:w-[220px] h-auto rounded-3xl shadow-2xl hover:scale-105 hover:shadow-3xl transition-all duration-300 object-contain"
-                  />
+                  <div className="relative w-[160px] md:w-[220px] bg-black rounded-[24px] p-1 shadow-2xl hover:scale-105 hover:shadow-3xl transition-all duration-300">
+                    <div className="relative bg-white rounded-[20px] overflow-hidden">
+                      <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-12 h-3 bg-black rounded-full z-10"></div>
+                      <div className="pt-4">
+                        <Image
+                          src="/peerpay-app-screen/abc1.png"
+                          alt="PeerPays App Dashboard"
+                          width={240}
+                          height={480}
+                          className="w-full h-auto object-contain"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="absolute top-6 md:top-8 right-2 md:right-4 z-20 opacity-0 animate-slide-in-right animation-delay-200">
                 <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-l from-brand-teal/20 to-brand-navy/20 rounded-3xl blur-xl"></div>
-                  <Image
-                    src="/peerpay-app-screen/abc2.png"
-                    alt="PeerPays App Request Screen"
-                    width={240}
-                    height={480}
-                    className="relative w-[160px] md:w-[220px] h-auto rounded-3xl shadow-2xl hover:scale-105 hover:shadow-3xl transition-all duration-300 object-contain"
-                  />
+                  <div className="relative w-[160px] md:w-[220px] bg-black rounded-[24px] p-1 shadow-2xl hover:scale-105 hover:shadow-3xl transition-all duration-300">
+                    <div className="relative bg-white rounded-[20px] overflow-hidden">
+                      <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-12 h-3 bg-black rounded-full z-10"></div>
+                      <div className="pt-4">
+                        <Image
+                          src="/peerpay-app-screen/abc2.png"
+                          alt="PeerPays App Request Screen"
+                          width={240}
+                          height={480}
+                          className="w-full h-auto object-contain"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
