@@ -1,7 +1,43 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef, useEffect } from "react";
 
 export default function HomePage() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const totalCards = 4;
+    
+    const interval = setInterval(() => {
+      if (scrollRef.current) {
+        currentIndex = (currentIndex + 1) % totalCards;
+        const cardWidth = window.innerWidth < 768 ? 272 : 336; // w-64 + space or w-80 + space
+        const scrollPosition = currentIndex * cardWidth;
+        
+        scrollRef.current.scrollTo({ 
+          left: scrollPosition, 
+          behavior: 'smooth' 
+        });
+      }
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <section className="container -mt-8 pb-16">
@@ -108,7 +144,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="features" className="container py-16">
+      <section id="features" className="container pt-2 pb-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">Why choose PeerPays?</h2>
           <p className="text-brand-navy/70 text-lg max-w-2xl mx-auto">Unlock the full potential of your credit cards while helping others access better deals</p>
@@ -128,7 +164,66 @@ export default function HomePage() {
         </div>
       </section>
 
-
+      <section className="bg-gradient-to-b from-slate-900 to-gray-900 py-8">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-white">Trending Offers</h2>
+            <p className="text-gray-400 mt-2">Check out the latest trending offers and start your rewarding journey</p>
+          </div>
+          <div className="md:flex md:items-center md:space-x-6 md:justify-center">
+            <button onClick={scrollLeft} className="hidden md:flex w-10 h-10 items-center justify-center rounded-full bg-brand-teal text-white shadow-lg flex-shrink-0 hover:bg-brand-teal/80 transition-colors">
+              <span className="text-xl">‹</span>
+            </button>
+            <div ref={scrollRef} className="flex space-x-4 overflow-x-auto scrollbar-hide max-w-4xl snap-x snap-mandatory md:snap-none px-4 md:px-0">
+              <div className="md:hidden w-8 flex-shrink-0"></div>
+              <div className="relative flex-shrink-0 snap-center">
+                <img src="/offer-cards/axis card.png" alt="Axis Card" className="w-64 md:w-80 h-auto rounded-xl shadow-lg"/>
+                <div className="absolute top-1/2 right-2 md:right-6 transform -translate-y-1/2 text-white text-left w-[55%] md:w-[60%]">
+                  <h3 className="text-sm md:text-lg font-bold">Earn Rs. 1,100</h3>
+                  <p className="text-xs md:text-sm opacity-80">by using your Axis Bank card</p>
+                  <p className="text-xs opacity-60 hidden md:block">More than 800 users have earned Rs. 8,60,000 in last 30 days</p>
+                </div>
+              </div>
+              <div className="relative flex-shrink-0 snap-center">
+                <img src="/offer-cards/icici card.png" alt="ICICI Card" className="w-64 md:w-80 h-auto rounded-xl shadow-lg"/>
+                <div className="absolute top-1/2 right-2 md:right-6 transform -translate-y-1/2 text-black text-left w-[55%] md:w-[60%]">
+                  <h3 className="text-sm md:text-lg font-bold">Earn Rs. 800</h3>
+                  <p className="text-xs md:text-sm opacity-80">by using your ICICI Bank card</p>
+                  <p className="text-xs opacity-60 hidden md:block">More than 900 users have earned Rs. 7,60,000 in last 30 days</p>
+                </div>
+              </div>
+              <div className="relative flex-shrink-0 snap-center">
+                <img src="/offer-cards/sbi card.png" alt="SBI Card" className="w-64 md:w-80 h-auto rounded-xl shadow-lg"/>
+                <div className="absolute top-1/2 right-2 md:right-6 transform -translate-y-1/2 text-white text-left w-[55%] md:w-[60%]">
+                  <h3 className="text-sm md:text-lg font-bold">Earn Rs. 600</h3>
+                  <p className="text-xs md:text-sm opacity-80">by using your SBI card</p>
+                  <p className="text-xs opacity-60 hidden md:block">More than 400 users have earned Rs. 2,40,000 in last 30 days</p>
+                </div>
+              </div>
+              <div className="relative flex-shrink-0 snap-center">
+                <img src="/offer-cards/hsbc card.png" alt="HSBC Card" className="w-64 md:w-80 h-auto rounded-xl shadow-lg"/>
+                <div className="absolute top-1/2 right-2 md:right-6 transform -translate-y-1/2 text-black text-left w-[55%] md:w-[60%]">
+                  <h3 className="text-sm md:text-lg font-bold">Earn Rs. 700</h3>
+                  <p className="text-xs md:text-sm opacity-80">by using your HSBC card</p>
+                  <p className="text-xs opacity-60 hidden md:block">More than 300 users have earned Rs. 1,90,000 in last 30 days</p>
+                </div>
+              </div>
+              <div className="md:hidden w-8 flex-shrink-0"></div>
+            </div>
+            <button onClick={scrollRight} className="hidden md:flex w-10 h-10 items-center justify-center rounded-full bg-brand-teal text-white shadow-lg flex-shrink-0 hover:bg-brand-teal/80 transition-colors">
+              <span className="text-xl">›</span>
+            </button>
+          </div>
+          <div className="flex justify-center space-x-4 mt-6 md:hidden">
+            <button onClick={scrollLeft} className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-teal text-white shadow-lg hover:bg-brand-teal/80 transition-colors">
+              <span className="text-xl">‹</span>
+            </button>
+            <button onClick={scrollRight} className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-teal text-white shadow-lg hover:bg-brand-teal/80 transition-colors">
+              <span className="text-xl">›</span>
+            </button>
+          </div>
+        </div>
+      </section>
 
       <section id="get-started" className="container py-20">
         <div className="relative">
