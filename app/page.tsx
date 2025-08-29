@@ -102,7 +102,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <button
-                  onClick={openGetStartedModal}
+                  onClick={openGetStartedModal || undefined}
                   className="btn btn-primary text-lg px-8 py-4"
                 >
                   Get started
@@ -127,7 +127,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <button
-                  onClick={openGetStartedModal}
+                  onClick={openGetStartedModal || undefined}
                   className="btn btn-primary text-lg px-8 py-4"
                 >
                   Get started
@@ -231,7 +231,7 @@ export default function HomePage() {
             <h3 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">Ready to start with PeerPays?</h3>
             <p className="text-brand-navy/75 text-lg mb-8 max-w-2xl mx-auto">Create your profile and post requirements in minutes. Join thousands of users already maximizing their credit potential.</p>
             <button
-              onClick={openGetStartedModal}
+              onClick={openGetStartedModal || undefined}
               className="btn btn-primary text-lg px-10 py-4"
             >
               Join PeerPays
