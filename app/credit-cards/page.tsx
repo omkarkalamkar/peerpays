@@ -285,11 +285,11 @@ export default function CreditCardsPage() {
   const [compareList, setCompareList] = useState<typeof creditCards>([]);
   const [showCompare, setShowCompare] = useState(false);
   const [showAllCards, setShowAllCards] = useState(false);
-  const [expandedFeatures, setExpandedFeatures] = useState({});
-  const [affiliateLinks, setAffiliateLinks] = useState({});
+  const [expandedFeatures, setExpandedFeatures] = useState<Record<number, boolean>>({});
+  const [affiliateLinks, setAffiliateLinks] = useState<Record<string, string>>({});
   const [showRecommendationQuiz, setShowRecommendationQuiz] = useState(false);
   const [quizStep, setQuizStep] = useState(0);
-  const [quizAnswers, setQuizAnswers] = useState({});
+  const [quizAnswers, setQuizAnswers] = useState<Record<string, string>>({});
 
   useEffect(() => {
     fetch('/affiliate-links.json')
@@ -349,7 +349,7 @@ export default function CreditCardsPage() {
   ];
 
   const getRecommendations = () => {
-    const { spending, amount, income } = quizAnswers;
+    const { spending, amount, income } = quizAnswers as any;
     let recommendations = [];
 
     if (spending === 'shopping' && amount === 'low') {
@@ -367,7 +367,7 @@ export default function CreditCardsPage() {
     return recommendations;
   };
 
-  const handleQuizAnswer = (questionKey, value) => {
+  const handleQuizAnswer = (questionKey: string, value: string) => {
     const newAnswers = { ...quizAnswers, [questionKey]: value };
     setQuizAnswers(newAnswers);
     
