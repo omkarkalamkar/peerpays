@@ -282,7 +282,7 @@ const categories = ["All", "Premium", "Cashback", "Shopping", "Travel", "Lifesty
 export default function CreditCardsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
-  const [compareList, setCompareList] = useState([]);
+  const [compareList, setCompareList] = useState<typeof creditCards>([]);
   const [showCompare, setShowCompare] = useState(false);
   const [showAllCards, setShowAllCards] = useState(false);
   const [expandedFeatures, setExpandedFeatures] = useState({});
