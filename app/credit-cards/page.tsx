@@ -307,7 +307,7 @@ export default function CreditCardsPage() {
     }
   };
 
-  const removeFromCompare = (cardId) => {
+  const removeFromCompare = (cardId: number) => {
     setCompareList(compareList.filter(c => c.id !== cardId));
   };
 
