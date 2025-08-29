@@ -298,7 +298,7 @@ export default function CreditCardsPage() {
       .catch(err => console.error('Failed to load affiliate links:', err));
   }, []);
 
-  const addToCompare = (card) => {
+  const addToCompare = (card: typeof creditCards[0]) => {
     const isAlreadyAdded = compareList.find(c => c.id === card.id);
     if (isAlreadyAdded) {
       setCompareList(compareList.filter(c => c.id !== card.id));
