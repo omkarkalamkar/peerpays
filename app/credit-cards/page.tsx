@@ -629,7 +629,8 @@ export default function CreditCardsPage() {
                     className="object-contain p-2"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
-                      e.currentTarget.nextElementSibling.style.display = 'flex';
+                      const nextSibling = e.currentTarget.nextElementSibling as HTMLElement;
+                      if (nextSibling) nextSibling.style.display = 'flex';
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-brand-navy to-brand-teal rounded-lg flex items-center justify-center" style={{display: 'none'}}>
