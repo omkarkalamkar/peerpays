@@ -311,7 +311,7 @@ export default function CreditCardsPage() {
     setCompareList(compareList.filter(c => c.id !== cardId));
   };
 
-  const toggleFeatures = (cardId) => {
+  const toggleFeatures = (cardId: number) => {
     setExpandedFeatures(prev => ({
       ...prev,
       [cardId]: !prev[cardId]
