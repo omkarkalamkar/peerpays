@@ -88,7 +88,7 @@ export default function HowItWorks() {
         <div className="container text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-brand-navy mb-4 md:mb-6">Ready to maximize your credit potential?</h2>
           <p className="text-brand-navy/75 text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">
-            Join thousands of users who are already earning extra income and maximizing their credit card rewards
+            Join hundreds of users who are already earning extra income and maximizing their credit card rewards
           </p>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLScSUn2RHGz_b8qAxaGYI4PH4DdRbOlTdnQ9WYzkr56TsX6XHA/viewform"

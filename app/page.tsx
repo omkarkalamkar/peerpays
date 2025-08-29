@@ -62,7 +62,7 @@ export default function HomePage() {
     
     const testimonialInterval = setInterval(() => {
       if (testimonialScrollRef.current) {
-        testimonialIndex = (testimonialIndex + 1) % (totalTestimonials / 3);
+        testimonialIndex = (testimonialIndex + 1) % totalTestimonials;
         const scrollPosition = testimonialIndex * (window.innerWidth < 768 ? 304 : 920);
         
         testimonialScrollRef.current.scrollTo({ 
@@ -339,7 +339,7 @@ export default function HomePage() {
         <div className="bg-gradient-to-r from-brand-navy to-brand-teal rounded-xl md:rounded-2xl p-4 md:p-8 text-center text-white">
           <h2 className="text-xl md:text-3xl font-bold mb-2 md:mb-4">Ready to start with PeerPays?</h2>
           <p className="text-sm md:text-lg mb-4 md:mb-6 opacity-90">
-            Create your profile and post requirements in minutes. Join thousands of users already maximizing their credit potential.
+            Create your profile and post requirements in minutes. Join hundreds of users already maximizing their credit potential.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <button 
