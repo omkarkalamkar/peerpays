@@ -1,6 +1,6 @@
 {
+  "/faq/page": "app/faq/page.js",
   "/page": "app/page.js",
   "/credit-cards/page": "app/credit-cards/page.js",
-  "/faq/page": "app/faq/page.js",
   "/how-it-works/page": "app/how-it-works/page.js"
 }

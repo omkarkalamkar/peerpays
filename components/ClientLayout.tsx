@@ -42,7 +42,7 @@ export default function ClientLayout({ children }: { children: ReactNode }) {
 
               <div className="space-y-3">
                 <a
-                  href="https://wa.me/917974084102?text=Hi, I have credit cards and want to start earning with PeerPays"
+                  href="https://wa.me/919340988336?text=Hi, I have credit cards and want to start earning with PeerPays"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-brand-teal text-white py-3 px-4 rounded-xl font-medium hover:bg-brand-teal/90 hover:scale-[1.02] transition-all duration-200 flex items-center justify-center gap-2"
