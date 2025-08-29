@@ -2,9 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useEffect } from "react";
+import { useGetStartedModal } from "../components/ClientLayout";
 
 export default function HomePage() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const openGetStartedModal = useGetStartedModal();
+
 
   const scrollLeft = () => {
     if (scrollRef.current) {
@@ -98,14 +101,12 @@ export default function HomePage() {
                 and cardholders can put their cards to work, earning cash and maximizing rewards.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScSUn2RHGz_b8qAxaGYI4PH4DdRbOlTdnQ9WYzkr56TsX6XHA/viewform"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={openGetStartedModal}
                   className="btn btn-primary text-lg px-8 py-4"
                 >
                   Get started
-                </a>
+                </button>
                 <Link href="/how-it-works" className="btn btn-ghost text-lg px-8 py-4">How it works</Link>
               </div>
               <p className="text-sm text-brand-navy/60 flex items-center gap-2">
@@ -125,14 +126,12 @@ export default function HomePage() {
                 and cardholders can put their cards to work, earning cash and maximizing rewards.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScSUn2RHGz_b8qAxaGYI4PH4DdRbOlTdnQ9WYzkr56TsX6XHA/viewform"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={openGetStartedModal}
                   className="btn btn-primary text-lg px-8 py-4"
                 >
                   Get started
-                </a>
+                </button>
                 <Link href="/how-it-works" className="btn btn-ghost text-lg px-8 py-4">How it works</Link>
               </div>
               <p className="text-sm text-brand-navy/60 flex items-center gap-2">
@@ -231,14 +230,12 @@ export default function HomePage() {
           <div className="card relative z-10 text-center py-12">
             <h3 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">Ready to start with PeerPays?</h3>
             <p className="text-brand-navy/75 text-lg mb-8 max-w-2xl mx-auto">Create your profile and post requirements in minutes. Join thousands of users already maximizing their credit potential.</p>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScSUn2RHGz_b8qAxaGYI4PH4DdRbOlTdnQ9WYzkr56TsX6XHA/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={openGetStartedModal}
               className="btn btn-primary text-lg px-10 py-4"
             >
               Join PeerPays
-            </a>
+            </button>
           </div>
         </div>
       </section>

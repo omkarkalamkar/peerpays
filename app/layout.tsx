@@ -1,6 +1,6 @@
 import "./globals.css";
 import { ReactNode } from "react";
-import Nav from "../components/Nav";
+import ClientLayout from "../components/ClientLayout";
 import Footer from "../components/Footer";
 
 export const metadata = {
@@ -17,8 +17,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body>
-        <Nav />
-        <main className="min-h-[70vh] pt-32 md:pt-28">{children}</main>
+        <ClientLayout>{children}</ClientLayout>
         <Footer />
       </body>
     </html>

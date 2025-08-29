@@ -16,6 +16,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/how-it-works/page.js"
     ],
+    "/credit-cards/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/credit-cards/page.js"
+    ],
     "/faq/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",

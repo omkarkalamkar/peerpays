@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-export default function Nav() {
+export default function Nav({ onGetStarted }: { onGetStarted?: () => void }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -18,16 +18,26 @@ export default function Nav() {
         
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-6">
+          <Link className="nav-link text-brand-teal font-medium hover:text-brand-navy" href="/credit-cards">Apply for Cards</Link>
           <Link className="nav-link" href="/how-it-works">How it works</Link>
           <Link className="nav-link" href="/faq">FAQ</Link>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScSUn2RHGz_b8qAxaGYI4PH4DdRbOlTdnQ9WYzkr56TsX6XHA/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary"
-          >
-            Get started
-          </a>
+          {onGetStarted ? (
+            <button
+              onClick={onGetStarted}
+              className="btn btn-primary text-sm px-4 py-2"
+            >
+              Get started
+            </button>
+          ) : (
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScSUn2RHGz_b8qAxaGYI4PH4DdRbOlTdnQ9WYzkr56TsX6XHA/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary text-sm px-4 py-2"
+            >
+              Get started
+            </a>
+          )}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -43,21 +53,36 @@ export default function Nav() {
       {isOpen && (
         <div className="md:hidden bg-white border-t border-brand-navy/10">
           <div className="container py-4 space-y-3">
+            <Link href="/credit-cards" className="block nav-link text-brand-teal font-medium" onClick={() => setIsOpen(false)}>
+              Apply for Cards
+            </Link>
             <Link href="/how-it-works" className="block nav-link" onClick={() => setIsOpen(false)}>
               How it works
             </Link>
             <Link href="/faq" className="block nav-link" onClick={() => setIsOpen(false)}>
               FAQ
             </Link>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScSUn2RHGz_b8qAxaGYI4PH4DdRbOlTdnQ9WYzkr56TsX6XHA/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary inline-block"
-              onClick={() => setIsOpen(false)}
-            >
-              Get started
-            </a>
+            {onGetStarted ? (
+              <button
+                onClick={() => {
+                  onGetStarted();
+                  setIsOpen(false);
+                }}
+                className="btn btn-primary inline-block"
+              >
+                Get started
+              </button>
+            ) : (
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScSUn2RHGz_b8qAxaGYI4PH4DdRbOlTdnQ9WYzkr56TsX6XHA/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary inline-block"
+                onClick={() => setIsOpen(false)}
+              >
+                Get started
+              </a>
+            )}
           </div>
         </div>
       )}
