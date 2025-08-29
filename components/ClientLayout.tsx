@@ -35,12 +35,14 @@ export default function ClientLayout({ children }: { children: ReactNode }) {
               
               <div className="text-center mb-6">
                 <h3 className="text-lg font-bold text-brand-navy mb-2">Do you have credit cards?</h3>
-                <p className="text-gray-600 text-sm">Choose your path to start earning</p>
+                <div className="bg-brand-teal/10 border border-brand-teal/20 rounded-lg p-3 mt-4">
+                  <p className="text-brand-teal text-sm font-medium">App is under development, but you can <span className="text-green-600 font-bold">start earning now!</span></p>
+                </div>
               </div>
 
               <div className="space-y-3">
                 <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScSUn2RHGz_b8qAxaGYI4PH4DdRbOlTdnQ9WYzkr56TsX6XHA/viewform"
+                  href="https://wa.me/917974084102?text=Hi, I have credit cards and want to start earning with PeerPays"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-brand-teal text-white py-3 px-4 rounded-xl font-medium hover:bg-brand-teal/90 hover:scale-[1.02] transition-all duration-200 flex items-center justify-center gap-2"
@@ -54,7 +56,7 @@ export default function ClientLayout({ children }: { children: ReactNode }) {
                   className="w-full bg-brand-navy text-white py-3 px-4 rounded-xl font-medium hover:bg-brand-navy/90 hover:scale-[1.02] transition-all duration-200 flex items-center justify-center gap-2"
                   onClick={() => setShowGetStartedModal(false)}
                 >
-                  <span>+</span>
+                  <span className="text-lg font-bold">✗</span>
                   No, help me get one
                 </Link>
               </div>

@@ -1,3 +1,6 @@
+'use client';
+import { useState } from 'react';
+
 type QA = { q: string; a: React.ReactNode };
 
 const faqs: QA[] = [
@@ -15,36 +18,64 @@ const faqs: QA[] = [
 ];
 
 export default function FAQPage() {
+  const [showEmail, setShowEmail] = useState(false);
+
   return (
-    <section className="container py-20">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-brand-navy mb-4">Frequently asked questions</h1>
-        <p className="text-brand-navy/75 text-lg max-w-2xl mx-auto">Everything you need to know about PeerPays</p>
-      </div>
-      <div className="max-w-3xl mx-auto space-y-4">
-        {faqs.map((item, idx) => (
-          <details key={item.q} className="card group hover:shadow-xl transition-all duration-300">
-            <summary className="cursor-pointer list-none text-lg font-semibold flex justify-between items-center py-2">
-              <span className="text-brand-navy group-hover:text-brand-teal transition-colors">{item.q}</span>
-              <span className="text-brand-teal group-open:rotate-180 transition-transform duration-300 text-xl">▼</span>
-            </summary>
-            <div className="mt-4 pt-4 border-t border-brand-navy/10">
-              <p className="text-brand-navy/75 leading-relaxed">{item.a}</p>
+    <>
+      <section className="container -mt-20 py-12 md:py-20">
+        <div className="text-center mb-12 md:mb-16">
+          <div className="inline-block px-4 py-2 bg-brand-teal/10 rounded-full mb-6">
+            <span className="text-brand-teal font-medium text-sm">Support</span>
+          </div>
+          <h1 className="text-3xl md:text-5xl font-bold text-brand-navy mb-4 md:mb-6">Frequently Asked <span className="text-brand-teal">Questions</span></h1>
+          <p className="text-brand-navy/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">Everything you need to know about PeerPays and how it works</p>
+        </div>
+        
+        <div className="max-w-4xl mx-auto space-y-6">
+          {faqs.map((item, idx) => (
+            <details key={item.q} className="group bg-white rounded-lg border border-gray-200 hover:border-brand-teal/30 hover:shadow-md transition-all duration-300 open:bg-brand-teal/5 open:border-brand-teal/50">
+              <summary className="cursor-pointer list-none p-4 md:p-5 flex justify-between items-center">
+                <span className="text-base md:text-lg font-semibold text-brand-navy group-hover:text-brand-teal transition-colors pr-4">{item.q}</span>
+                <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
+                  <span className="text-brand-teal group-open:rotate-180 transition-transform duration-300 text-sm">▼</span>
+                </div>
+              </summary>
+              <div className="px-4 md:px-5 pb-4 md:pb-5 pt-0">
+                <div className="border-t border-gray-100 pt-4">
+                  <div className="text-brand-navy/75 text-sm md:text-base leading-relaxed">{item.a}</div>
+                </div>
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-gray-50/50 py-12 md:py-16">
+        <div className="container text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-brand-navy mb-4">Still have questions?</h2>
+          <p className="text-brand-navy/60 mb-8 text-base md:text-lg">Can't find the answer you're looking for? Get in touch with our team.</p>
+          <button
+            onClick={() => setShowEmail(!showEmail)}
+            className={`relative overflow-hidden min-w-48 px-8 py-4 rounded-lg font-semibold text-base transition-colors duration-500 ${
+              showEmail 
+                ? 'bg-brand-teal hover:bg-brand-teal/90 text-white' 
+                : 'bg-brand-navy hover:bg-brand-navy/90 text-white'
+            }`}
+          >
+            <span className={`transition-all duration-500 ${showEmail ? 'opacity-0 transform -translate-y-full' : 'opacity-100 transform translate-y-0'}`}>
+              Contact us
+            </span>
+            <span className={`absolute inset-0 flex items-center justify-center transition-all duration-500 text-base ${showEmail ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-full'}`}>
+              omkar@peerpays.in
+            </span>
+          </button>
+          {showEmail && (
+            <div className="mt-4 animate-pulse">
+              <p className="text-brand-teal text-sm">Click to copy email</p>
             </div>
-          </details>
-        ))}
-      </div>
-      <div className="text-center mt-16">
-        <p className="text-brand-navy/60 mb-6">Still have questions?</p>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLScSUn2RHGz_b8qAxaGYI4PH4DdRbOlTdnQ9WYzkr56TsX6XHA/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-primary"
-        >
-          Contact us
-        </a>
-      </div>
-    </section>
+          )}
+        </div>
+      </section>
+    </>
   );
 }

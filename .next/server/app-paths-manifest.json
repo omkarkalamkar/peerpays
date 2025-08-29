@@ -1,5 +1,7 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/credit-cards/page": "app/credit-cards/page.js",
   "/page": "app/page.js",
   "/faq/page": "app/faq/page.js",
-  "/credit-cards/page": "app/credit-cards/page.js"
+  "/how-it-works/page": "app/how-it-works/page.js"
 }
